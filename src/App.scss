@@ -1,0 +1,492 @@
+$blue-zodiac: #3D4F5C;
+$orange: #F9891A;
+$light-blue: #4CB8C7;
+$snow: #FBFAFA;
+$yellow: #FFC351;
+$grey: #F3F3F3;
+// Defining font variables
+$circular-medium: 'Circular Std Medium', sans-serif;
+$circular-book: 'Circular Std Book', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('/fonts/CircularStd-Medium.woff2') format('woff2');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Circular Std Book';
+  src: url('/fonts/CircularStd-Book.woff2') format('woff2');
+  font-style: normal;
+}
+
+.App {
+  margin: 0;
+  font-family: 'Circular Std';
+  font-weight: 500;
+  color: $blue-zodiac;
+}
+
+
+//Animations
+.buzz {
+  animation: buzzX 0.2s infinite;
+}
+@keyframes buzzX {
+  0%, 100% {
+      transform: translateX(0);
+  }
+  50% {
+      transform: translateX(20px);
+  }
+}
+//Slides
+.slide-right {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s, transform 1s;
+}
+.slide-right.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-left {
+  opacity: 0;
+  transform: translateX(+100%);
+  transition: opacity 1s, transform 1s;
+}
+.slide-left.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.slide-up {
+  opacity: 0;
+  transform: translateY(+250%);
+  transition: opacity 1s, transform 1s;
+}
+.slide-up.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-down {
+  opacity: 0;
+  transform: translateY(-250%);
+  transition: opacity 1s, transform 1s;
+}
+.slide-down.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+//Rotation
+@keyframes rotateLeftAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(100%) rotate(90deg);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0deg);
+  }
+}
+.rotate-in{
+  animation: rotateLeftAnimation 1s ease-out; 
+}
+
+
+//paddings
+.herostart, .feature-section {
+  padding-left: 7rem;
+}
+.hero1, .hero2-section{
+  padding-top: 7rem;
+  padding-bottom: 7rem;
+}
+
+// HEADER 
+
+.header{
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+a img{ //brand logo
+  max-width: 95%;
+}
+
+li {
+  .nav-item{
+    color: #3D4F5C;
+    text-decoration: none;
+  }
+  .nav-item:hover{
+    color: $light-blue;
+  }
+
+.workwithusbtn {
+    padding: 8px 32px;
+    color: $light-blue !important;
+    background-color: white;
+    font-weight: 700;
+    border: 1px solid $light-blue;
+    border-radius: 25px !important;
+  }
+  .workwithusbtn:hover {
+    color: #3D4F5C !important;
+  }
+}
+
+//herostart (First hero in the page)
+
+.herostart {
+  min-height: 75vh;
+
+  
+  .herostart-title {
+    
+color: $blue-zodiac !important;
+font-size: 4.5rem;
+font-style: normal;
+font-weight: 700;
+line-height: 80px;
+color: #3D4F5C;
+
+  }
+
+  
+    .herostart-lead{
+      font-size: 20px;
+      font-weight: 400;
+      color: $orange;
+  }
+
+
+
+    .herostart-button {
+      padding: 8px 20px;
+      color: white;
+      background-color: $light-blue;
+      font-weight: 500;
+      border: none;
+      border-radius: 25px;
+    }
+  
+  
+}
+
+//"Who we are" and "Our core values"
+
+.feature-section {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: $snow;
+  .featuretitle {
+    font-weight: 700;
+  }
+
+  .featuredescription {
+    font-family: $circular-book;
+    font-size: 24px;
+    color: $orange;
+    font-weight: 500;
+  }
+
+  .featureimg {
+    max-width: 100px;
+  }
+
+  .features-container{
+    margin-top: 3rem;
+    margin-right: 10rem;
+  }
+}
+
+.singlefeature {
+  
+
+  .featurenumber {
+    font-size: 24px;
+    color: $orange;
+    font-weight: 600;
+  }
+
+  .featuretext {
+    font-size: 24px;
+    font-family: $circular-book;
+    font-weight: 600;
+  }
+  .line{
+    width: 10%; 
+    height: 100%; 
+    border: 0.5px #3D4F5C solid;
+  }
+}
+
+// "We love solving problems" and "Startups create..."
+.hero1 {
+  .title-container {
+    max-width:75%;
+  }
+
+  .hero1-title {
+    color: #F9891A;
+    font-size: 35px;
+    
+  }
+
+  .thumbup {
+    max-width: 100px;
+    padding-bottom: 1.5rem;
+  }
+}
+
+.thumbupleft {
+  transform: scaleX(-1);
+}
+
+// Chatassistant
+.chat-assistant{
+  position: absolute;
+  top: 40px;
+  right: 100px;
+  
+
+  .chat-avatar {
+    text-align: end;
+    width: 100px;
+    height: 100px;
+    background-color: $snow;
+    border: 15px solid white;
+    border-radius: 50%;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.1);
+    display: flex; /* Added */
+    align-items: center; /* Added */
+    justify-content: center; /* Added */
+  }
+  .chat-img {
+    height: 65%;
+  }
+  .chat-img:hover{
+    cursor: pointer;
+  }
+
+.chat-text-container{
+  border-radius: 50px;
+  border-bottom-right-radius: 0;
+  padding: 10px 20px 10px 20px;
+  margin-right: 80px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 14px;
+  width: 100%;
+  height: 100%;
+  background: #46B8C8;
+  color: white;
+  font-family: $roboto;
+  font-weight: 4h00;
+}
+.chat-close{
+  margin-right: 10px;
+  font-size: 14px;
+  color: #939393;
+}
+.chat-close:hover{
+  color: #46B8C8;
+  cursor: pointer;
+}
+}
+
+// "Our works"
+
+.works-section {
+  .works-title {
+    font-weight: 700;
+  }
+
+  .card {
+    width: 32rem;
+    height: 35rem;
+    margin: 1rem;
+    border-radius: 30px;
+    border: none;
+    box-shadow: 0px 0px 15px 15px $snow;
+
+  }
+  .card-text-section{
+    min-height: 10rem;
+
+  h2 {
+    font-size: 32px;
+    font-weight: 400;
+  }
+
+ p {
+    font-family: $circular-book;
+    font-size: 16px;
+  }
+
+}
+
+  .client-img {
+    height: 260px;
+    width: auto;
+  }
+
+  .more-btn {
+    padding: 8px 30px;
+    color: $light-blue;
+    background-color: white;
+    font-weight: 700;
+    border: 1px solid $light-blue;
+    border-radius: 25px;
+  }
+}
+
+
+// "We are hiring"
+
+.hero2-section {
+    background-color: $snow;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+
+.title-hero2{
+    font-size: 50px;
+}
+
+.text-hero2{
+    font-family: $circular-book;
+    font-weight: 400;
+    font-size: 24px;
+    color: $orange;
+  }
+.button-hero2{
+    padding: 8px 30px;
+    color: white;
+    background-color: $light-blue;
+    font-size: 18px;
+    font-weight: 700;
+    border: none;
+    border-radius: 25px;
+}
+}
+
+// "Are you ready to board this rocket ship?"
+
+.getintouch-section{
+    background-color: $yellow;
+
+    .getintouch-content{
+      padding-top: 4rem;
+      padding-left: 7rem;
+      padding-bottom: 4rem;
+    }
+
+    .getintouch-title{
+        color: white;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+    .getintouch-text{
+      font-family: $roboto;
+        color: white;
+        font-weight: 500;
+        font-size: 24px;
+    }
+
+    .rocket{
+        z-index: 0;
+    }
+
+    //EmailUs Component 
+
+    .emailus-container{
+        z-index: 1;
+        width: 500px;
+        max-height: 650px;
+        background-color: $grey;
+        border-radius: 15px;
+
+        #inputName{
+            margin-top: 5rem
+        }
+
+        #inputMessage{
+            height: 15rem;
+        }
+
+        .form-group{
+          font-family: $roboto;
+            width: 85%;
+            margin-bottom: 1rem;
+        }
+        
+        .form-group input::placeholder, 
+        .form-group textarea::placeholder{
+          color: #939393;
+        }
+ 
+        .form-control{
+          border: none;
+          height: 3rem;
+          color: $blue-zodiac;
+        }
+      
+        .form-group textarea{
+          resize: none;
+          overflow-y: scroll;
+        }
+        .btn-sendmessage{
+        margin-top: 1rem;
+        padding: 8px 30px;
+        color: white;
+        background-color: #3D4F5C;
+        border: none;
+        border-radius: 25px;
+        }
+        .btn-sendmessage:hover{
+          color: #3D4F5C;
+          background-color: $grey;
+        }
+    }
+  }
+    // Footer
+
+    footer{
+      background-color: $snow;
+      font-family: $circular-book;
+      padding-left: 7rem;
+      padding-right: 7rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+
+      .footer-col{
+        padding: 0;
+      }
+
+      .footer-title{
+        font-size: 18px;
+        font-weight: 400;
+      }
+      
+      .footer-text{
+        color: #939393;
+        line-height: 22px;
+        
+      }
+      .footer-link, .footer-icon{
+        color: $light-blue;
+      }
+
+      .nav-link:hover, .footer-icon:hover{
+        color: $blue-zodiac;
+      } 
+        }
+
+
+      
