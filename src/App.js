@@ -22,7 +22,7 @@ function App() {
         We value working with talented people that understand the possibilities of today.
       </>
     ),    
-    imgname: "imgs/questionmark.png",
+    imgname: "./imgs/questionmark.png",
     features:[
     { number: "01", text: "We develop innovative products, systems, and services" },
     { number: "02", text: "Next we build teams to scale them into companies" },
@@ -31,7 +31,7 @@ function App() {
   };
   const featuresData2 = {
     title : "Our core values",
-    imgname: "imgs/lightbulb.png",
+    imgname: "./imgs/lightbulb.png",
     features:[
    { number: "01. Innovation", text: "Startupz operates where entrepreneurship and technology intersect. We design solutions and turn them into businesses models." },
    { number: "02. People", text: "Talent is what enable us to create great companies." },

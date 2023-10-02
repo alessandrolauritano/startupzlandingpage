@@ -20,7 +20,7 @@ const titleStyle = {
     <h2 className="client-name" style={titleStyle}>{props.clientName}</h2>
     <p className="client-text mt-4">{props.clientDescription}</p>
     </div>
-    <img className='client-img img-fluid pt-4 pb-4' src={`./startupzlandingpage${props.imgPath}`} alt='workimg'></img> 
+    <img className='client-img img-fluid pt-4 pb-4' src={`${props.imgPath}`} alt='workimg'></img> 
     <a className="btn more-btn mt-3" href={`${props.url}`} target="_blank">More</a>
   </div>
 </div>

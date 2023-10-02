@@ -11,7 +11,7 @@ function Hero1(props) {
       <div className="col d-flex justify-content-end">
         <img
           className="thumbup thumbupleft img-fluid" 
-          src='./startupzlandingpage/imgs/thumbup.png' 
+          src='./imgs/thumbup.png' 
           alt='thumb up' 
         />
       </div>
@@ -23,7 +23,7 @@ function Hero1(props) {
       <div className="col d-flex justify-content-start">
         <img
           className="thumbup thumbupright img-fluid" 
-          src='./startupzlandingpage/imgs/thumbup.png' 
+          src='./imgs/thumbup.png' 
           alt='thumb up'/>
       </div>
       {/* In this way it's possible to choose to show or not Chatassistant  */}

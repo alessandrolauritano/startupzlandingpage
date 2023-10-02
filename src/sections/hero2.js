@@ -20,7 +20,7 @@ function Hero2() {
       <div className="col-md-2 d-flex justify-content-end">
         <img
           className="img-fluid"
-          src='./startupzlandingpage/imgs/hero2-right.png'
+          src='./imgs/hero2-right.png'
           alt='hero2-right'
         />
       </div>

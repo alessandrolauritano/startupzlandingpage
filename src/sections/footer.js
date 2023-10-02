@@ -12,7 +12,7 @@ function Footer() {
     <div className='footer-container container-fluid' id="footer">
         <footer className="footer row">
         <div className="footer-col col-md-4 d-flex flex-column justify-content-between align-items-start">
-        <img className="" src="./startupzlandingpage/imgs/logo.png" alt="Logo" />
+        <img className="" src="./imgs/logo.png" alt="Logo" />
       <p className="footer-text mb-3">© 2023 Startupz<br></br>All rights reserved.</p>
     </div>
 

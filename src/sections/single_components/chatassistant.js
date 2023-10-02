@@ -19,7 +19,7 @@ function Chatassistant() {
       </div>
       <div className='d-flex justify-content-end align-items-end'>
       <div className='chat-avatar text-center'>
-        <img className="chat-img" src="./startupzlandingpage/imgs/chatbot.png" alt="Chatbot Avatar" />
+        <img className="chat-img" src="./imgs/chatbot.png" alt="Chatbot Avatar" />
       </div>
     </div>
     </div>

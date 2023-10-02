@@ -16,7 +16,7 @@ function Getintouch() {
       <div className="img-fluid rocket position-absolute start-50 bottom-0">
         <img
           className="img-fluid"
-          src="./startupzlandingpage/imgs/rocket.png"
+          src="./imgs/rocket.png"
           alt="Rocket"
           width="90%"
         />

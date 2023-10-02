@@ -30,7 +30,7 @@ function Herostart() {
       <div className="slide-left background-herostart position-absolute end-0 bottom-0">
         <img
           className="d-block img-fluid"
-          src="./startupzlandingpage/imgs/herostart.png"
+          src="./imgs/herostart.png"
           alt="headerimg"
           width="100%"
           loading="lazy"

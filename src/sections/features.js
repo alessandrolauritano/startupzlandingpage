@@ -18,7 +18,7 @@ function Features(props) {
       
       </div>
       <div className="col p-0">
-      <img className="slide-right featureimg" src={`./startupzlandingpage/${imgname}`} alt='featureimg'></img>
+      <img className="featureimg" src={`${imgname}`} alt='featureimg'></img>
       </div>
       </div>
         {/* {The following code maps the set in the app.js to adapt autmatically
