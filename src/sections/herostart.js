@@ -27,7 +27,7 @@ function Herostart() {
           </button>
         </div>
       </div>
-      <div className="slide-left background-herostart position-absolute end-0 bottom-0">
+      <div className="slide-left background-herostart p-3 position-absolute end-0 bottom-0">
         <img
           className="d-block img-fluid"
           src="./imgs/herostart.png"

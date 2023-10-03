@@ -1,70 +1,120 @@
-# Getting Started with Create React App
+# Startupz Landing Page
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+## Approach, summary
 
-In the project directory, you can run:
+The whole webiste is built with React, split in 8 different sections (.src/sections) with 4 different single components (.src/sections/single_components)implemented in the sections.
 
-### `npm start`
+Bootstrap has been used, specifically, bootstrap components, re-styled and changed to fit the original mockup.
+Bootstrap grid and classes have been used.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Every single component, button or link has a functionality except for the mail box, it needs of course backend implementation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The animations are a combination of css styling and single functions inside `Animations.js` exported to single sections or component.
 
-### `npm test`
+## App
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`App.js` is the entry point of the application and represents the root component.
+Two sets of data (featuresData1 and featuresData2) are defined, each containing information about a set of features.
+These data sets include titles, descriptions, images, and feature lists, these data sets featuresData1 and featuresData2 are passed as props to the `Features` component to display the sets of features on the webpage.
 
-### `npm run build`
+After the featuresData sets, the App component proceeds to render various sections of the webpage, providing the structure and content for the entire application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Navbar
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The `Navbar` is the first React component,it's the navigation bar for the website.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After the main logo, there are two links to "Startups" and "Work with us!" as well as a "Contact" link that triggers a special animation handled by addBuzz.js animation.
 
-### `npm run eject`
+## Herostart
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The `Herostart` component is the section that serves as the main hero section for the website.
+It uses animation slideUp, slideRight, slideLeft from Animation.js module and also rotate-in class to the h1 title, which is the only animation that isn't based on javascript but only on css.
+All four animations start upon page load, creating a great user experience.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Features
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The `Features` component section component used to display a set of features on the webpage.
+It is thought to receive data through props, allowing to customize the content and appearance of the feature section.
+This component includes the title, description, image, and a set of features (in App.js) that can be dynamically generated based on the provided data. The Singlefeature component is used here to render individual features.
+The .map function iterates over the features array provided in the featuresData prop.
+This component is extremely customizable, moreover, consistent in its layout and scalable.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Singlefeature
 
-## Learn More
+The `Singlefeature` component represents the single feature within the feature section.
+It is designed to receive feature data through props, including feature number and text.
+This component applies a slide-down animation effect to the features as the user scrolls down the page and the features are visible.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Hero1
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The `Hero1` is the section component that reapeats twice in the website, once with a chat assistant.
+The component includes two thumbs-up images positioned on either side of the title and optionally a chat assistant.
 
-### Code Splitting
+The chat assistant is displayed or not thanks to conditional rendering.
+You can control whether to display the chat assistant by passing the showChatAssistant prop in App.js.
+If showChatAssistant prop is true or at least present, the chat assistant is rendered; otherwise, it remains hidden.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Chatassistant
 
-### Analyzing the Bundle Size
+The `Chatassistant` component is rendered inside the first Hero1 section component.
+The component includes an "X" button (close button) that users can click to hide the chat assistant.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Utilizing jQuery, the component adds an interactive behavior to the button. When clicked, it triggers an action that hides the chat assistant by applying the "hidden" CSS class to its container.
 
-### Making a Progressive Web App
+## Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The `Works` component is a React component that serves as a section to showcase a collection of works by startupz and it's made of four cards (singlecard.js) components.
 
-### Advanced Configuration
+As the user scrolls down the page, the four cards appear from right and left thanks to the animations.
+Each card displays client name, client description, and an image representing the project and a link to the client's website.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Singlecard
 
-### Deployment
+The `Singlecard` component is a single card showing a work for a specific client, displayed in the `Works` section.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+By providing the `titleColor` prop, you can easily choose which color to apply to the title.
+`slide` prop makes choosing the slide direction from the parent component.
 
-### `npm run build` fails to minify
+## Hero2
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The `Hero2` component is the last hero on the pagehas two images on the left and right sides of the section.
+The button labeled "See current openings" is directs the user to the company's job listings on LinkedIn.
+
+## Getintouch
+
+The `Getintouch` component provides a section for users to raise inquiries to the company by an email form.
+
+The email form is implemented as the `Emailus` component.
+The design of this section includes a background of a rocket.
+
+## Emailus
+
+The `Emailus` component is a thought to allow the user to send messages to the company.
+
+The component includes several form fields, each serving a specific purpose:
+
+"Name" and "Email" form are present, as well as a "Message" field as a text area where the user can compose their messages.
+All of the fields are required, ensuring that users provide all of them when submitting the form with the button at the bottom.
+
+## Footer
+
+The `Footer` component contains all the company's info and gives the ability to connect with the organization on social media platforms.
+Icons for Twitter, LinkedIn, and Instagram are provided, each linking to the organization's respective social media profiles.
+
+To organize content and achieve a well-structured layout, the footer uses a grid system with bootstrap's columns and flexbox.
+
+Buttons and social media icons are all working.
+"Send us an email" link within the contact information section is interactive. When clicked, it scrolls up to "Getintouch" section and triggers a buzz animation effect on the Email form.
+
+## Animations
+
+In `Animation.js` there are four main animations: slideRight, slideLeft, slideUp, and slideDown, which are designed to apply animations when elements become visible in the viewport as the user scrolls down the page, or simply just when the element is visible.
+
+The code relies is based on jQuery to select and manipulate DOM elements.
+
+To see if the element is visible these functions use the $(window).scrollTop() and $(this).offset().top methods to calculate the position of elements and the current scroll position. If an element's position is within a specified offset from the current position, it adds the 'active' class to trigger CSS animations.
+
+addBuzz.js function is also another animation, which adds and removes the '.buzz' class using setTimeout, to create a buzzing animation effect on a specified element.
+Additionally, not in the animation.js file, there are 2 more animation, rotateIn, used for the title and hidden, which are mainly css animations.

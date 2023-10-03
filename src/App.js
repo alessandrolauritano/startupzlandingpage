@@ -50,7 +50,6 @@ function App() {
         Startups create a world that actually is better.<br></br>Any problem that can be solved, will be solved <br></br>by a startup, and that is a huge opportunity.
         </>}>
         </Hero1>  
-        
       <Hero2/>
       <Getintouch/>
       <Footer/>

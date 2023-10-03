@@ -3,7 +3,7 @@ import $ from "jquery";
 function slideRight(element) {
     $(element).filter(function () {
       const elementPosition = $(this).offset().top; //Calculating the position of the element that has to be animated
-      const currentPosition = $(window).scrollTop() + $(window).height() - 500; //(current position on the page) + visible window (200 is a small offset to start the animation later)
+      const currentPosition = $(window).scrollTop() + $(window).height() - 300; //(current position on the page) + visible window (200 is a small offset to start the animation later)
   
       if (elementPosition < currentPosition) {
         $(this).addClass('active');
@@ -14,7 +14,7 @@ function slideRight(element) {
   function slideLeft(element) {
     $(element).filter(function () {
       const elementPosition = $(this).offset().top;
-      const currentPosition = $(window).scrollTop() + $(window).height() - 500 ; 
+      const currentPosition = $(window).scrollTop() + $(window).height() - 300 ; 
   
       if (elementPosition < currentPosition) {
         $(this).addClass('active');
@@ -25,7 +25,7 @@ function slideRight(element) {
   function slideUp(element) {
     $(element).filter(function () {
       const elementPosition = $(this).offset().top;
-      const currentPosition = $(window).scrollTop() + $(window).height() - 300 ; 
+      const currentPosition = $(window).scrollTop() + $(window).height() - 200 ; 
   
       if (elementPosition < currentPosition) {
         $(this).addClass('active');
@@ -36,7 +36,7 @@ function slideRight(element) {
   function slideDown(element) {
     $(element).filter(function() {
       const elementPosition = $(this).offset().top;
-      const currentPosition = $(window).scrollTop() + $(window).height() - 600;
+      const currentPosition = $(window).scrollTop() + $(window).height() - 500;
   
       if (elementPosition < currentPosition) {
         $(this).addClass('active'); // Use $(this) to target the current element
@@ -53,9 +53,6 @@ function addBuzz(element){
     $(element).removeClass('buzz');
   }, 1600);
 }
-
-
-
 
 
 

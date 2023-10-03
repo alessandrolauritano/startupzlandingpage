@@ -3,18 +3,20 @@ import $ from 'jquery';
 
 
 
-$("#closechat").on("click", () => {
-  $("#chatassistant").addClass("animate__animated animate__slow animate__backOutRight")
-})
 function Chatassistant() {
+
+const handleClose = () => {
+  $("#chatassistant").addClass("hidden")
+}
+
   return (
     <div className='chat-assistant' id="chatassistant">
       <div className='d-flex'>
         <div className='chat-text-container text-start'>
           <p className='m-0'>Hi! I am Ben, your virtual assistant.<br />How can I make your day better?</p>
         </div>
-        <div  id="closechat">
-          <p className='chat-close'>X</p>
+        <div>
+          <p className='chat-close' id="closechat" onClick={handleClose}>X</p>
         </div>
       </div>
       <div className='d-flex justify-content-end align-items-end'>

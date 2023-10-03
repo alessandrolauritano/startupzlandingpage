@@ -1,3 +1,4 @@
+// Defining color variables
 $blue-zodiac: #3D4F5C;
 $orange: #F9891A;
 $light-blue: #4CB8C7;
@@ -9,6 +10,7 @@ $circular-medium: 'Circular Std Medium', sans-serif;
 $circular-book: 'Circular Std Book', sans-serif;
 $roboto: 'Roboto', sans-serif;
 
+//Defining Circular fonts
 @font-face {
   font-family: 'Circular Std';
   src: url('/fonts/CircularStd-Medium.woff2') format('woff2');
@@ -96,6 +98,13 @@ $roboto: 'Roboto', sans-serif;
   animation: rotateLeftAnimation 1s ease-out; 
 }
 
+//hidden
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-out, visibility 1s ease-out;
+}
 
 //paddings
 .herostart, .feature-section {
